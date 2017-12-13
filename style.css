@@ -20,6 +20,7 @@ body,
   width: 50%;
   height: 100%;
   position: fixed;
+  /*display: inline-block;*/
   vertical-align: top;
 }
 
@@ -41,6 +42,7 @@ body,
   position: relative;
   left: 50%;
   overflow: scroll;
+  /*display: inline-block;*/
 }
 
 
@@ -82,6 +84,8 @@ h1 {
   border: solid 1px #BBBDBF;
   padding-top: 10px;
   position: relative;
+  font-size: 30px;
+
 }
 
  ::placeholder {
@@ -152,7 +156,7 @@ li section {
   left: 2%;
 }
 
-#website-list-read-button {
+.website-list-read-button {
   text-decoration: underline;
   border:none;
   outline: none;
@@ -178,7 +182,7 @@ li section {
 }
 
 #website-list-url:hover,
-#website-list-read-button:hover,
+.website-list-read-button:hover,
 #website-list-delete-button:hover {
   color: #455A64;
   text-decoration: underline;
@@ -189,13 +193,33 @@ li section {
 
 /*on click: FOR JS/ change styling after read*/
 
-/*#website-list-stlying-after-read {
+.website-list-stlying-after-read {
   background-color: #F2F4F4;
   text-decoration: underline;
   text-decoration-color: #CFD8DC;
 }
-#website-list-read-button-after-read{
+.website-list-red{
   color: #F05A28;
-  text-decoration: none;*/
+  text-decoration: none;
+  font-weight: 800;
+
+
+
+
+
+@media screen and (max-width: 320px) {
+  
+  .section-1,
+  .section-2 {
+    display: block;
+
+  }
+}
+  
+
+
+
+
+
   
 

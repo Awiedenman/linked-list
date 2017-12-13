@@ -2,7 +2,9 @@ var parent = $("#section-2");
 
 $('#enter-button').on('click', createCard);
 $('#enter-button').on('click', deleteEntry);
-
+$('#section-1').on('input', '#website-title-input, #website-url-input', enableButton);
+// $('#website-list-read-button').on('click', .website-list-read-button-after-read
+$('#section-2').on('click','.website-list-read-button', readButton);
 $('#section-2').on('click','#website-list-delete-button', removeBookmarkFromList);
 
 function createCard(){
@@ -18,30 +20,38 @@ function createCard(){
         <a id="website-list-url" href="${websiteUrlInput}">${websiteUrlInput}</a>
       </section>
       <section>
-        <button id="website-list-read-button">Read</button>
+        <button class="website-list-read-button">Read</button>
         <button id="website-list-delete-button">Delete</button>
       </section>
     </li>  
 `);
 }
 
+  function enableButton() {
+  if ($('#website-title-input').val() == '' && $('#website-url-input').val() == '') {
+    $('.enable-on-input').prop('disabled', true);
+  } else if ($('#website-title-input').val() == '' || $('#website-url-input').val() == '') {
+    $('.enable-on-input').prop('disabled', true);
+  } else {
+      $('.enable-on-input').prop('disabled', false);
+  }
+};
+
 function deleteEntry() {
 $('#website-title-input').val('');
 $('#website-url-input').val('');
+$('.enable-on-input').prop('disabled', true);
 }
 
 function removeBookmarkFromList() {
-  console.log(event, "function");
-  console.log(1);
   if(event.target.id === 'website-list-delete-button') {
-    console.log('delete button');
-    console.log(event);
-    console.log("event.pageX: " + event.pageX);
     $(this).closest('li').remove();
-  } else {
-    console.log('section-2');
  };  
 }
+  function readButton() {
+    $(event.target).toggleClass('website-list-red');
+ };  
+
 
  
      
