@@ -3,7 +3,7 @@ var parent = $("#section-2");
 $('#enter-button').on('click', createCard);
 $('#enter-button').on('click', deleteEntry);
 
-// $('#section-2').on('click','#website-list-delete-button', removeBookmarkFromList);
+$('#section-2').on('click','#website-list-delete-button', removeBookmarkFromList);
 
 function createCard(){
   event.preventDefault();
@@ -30,21 +30,18 @@ $('#website-title-input').val('');
 $('#website-url-input').val('');
 }
 
-
-
-// function removeBookmarkFromList() {
-  // console.log(event, "function");
-  // console.log(1);
-  // if(event.target.id === 'website-list-delete-button') {
-    
-  //   console.log('delete button');
-  // } else {
-  //   console.log('section-2');
-  // } 
-  $('#section-2').on('click','#website-list-delete-button', function() { 
-    $(this).closest('li').remove('.list-title-box');
- });  
-
+function removeBookmarkFromList() {
+  console.log(event, "function");
+  console.log(1);
+  if(event.target.id === 'website-list-delete-button') {
+    console.log('delete button');
+    console.log(event);
+    console.log("event.pageX: " + event.pageX);
+    $(this).closest('li').remove();
+  } else {
+    console.log('section-2');
+ };  
+}
 
  
      
