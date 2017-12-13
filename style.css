@@ -31,7 +31,6 @@ body,
   position: relative;
   left: 50%;
   overflow: scroll;
-  vertical-align: top;
 }
 
 h1 {
@@ -45,6 +44,14 @@ h1 {
   top: 25%;
   letter-spacing: 0px;
   right: 9px;
+}
+.list-title-box {
+  border-bottom: 1px solid #D6DDE1;
+  width: 95%;
+}
+.list-url-box {
+  border-bottom: 1px solid #D6DDE1;
+  width: 95%;
 }
 
 #logo {
@@ -101,6 +108,8 @@ h1 {
 .title-box { 
   width: 100%;
   border-bottom: 2px solid lightgray;
+  text-align: center;
+  position: relative;
 
 }
 
@@ -113,14 +122,14 @@ li {
   background-color: #FFFFFF;
   border: 1px solid #455A64;
   list-style: none;
-  width:90%;
-  height:180px;
-  margin: 4%;
+  width: 90%;
+  height:168px;
+  margin: 3% 5%;
   padding: 0px;
   position: relative;
 }
 li section {
-  height: 33%%;
+  height: 33%;
   margin: 10px;
 }
 
@@ -148,23 +157,22 @@ li section {
   text-decoration-color: #F2F4F4;
   position: relative;
   font-size: .75em;
+  color:  #455A64;
   left: 0%;
-  top: 60px;
   display: inline;
-  /*left: 5px;
-  bottom: 2px;*/
 }
 
 #website-list-delete-button {
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
-  position: relative;
+  position: absolute;
   border: none;
   outline: none;
   font-size: .75em;
   display: inline;
-  left: 367px;
-  top: 60px;
+  color:  #455A64;
+  right: 5px;
+  bottom:5px;
 }
 
 #website-list-url:hover,
