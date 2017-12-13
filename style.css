@@ -1,0 +1,199 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+ }
+
+html,
+body,
+#main {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#main {
+  display:inline-block;
+}
+#section-1 {
+  background-color: #455A64;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  vertical-align: top;
+}
+
+#section-2 {
+  color: #FFFFFF;
+  width: 50%;
+  height: 100%;
+  background-color: #CFD8DC; 
+  position: relative;
+  left: 50%;
+  overflow: scroll;
+}
+
+h1 {
+  color: #FFFFFF;
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 800;
+  font-size: 70px;
+  text-align: center;
+  position: relative;
+  top: 25%;
+  letter-spacing: 0px;
+  right: 9px;
+}
+.list-title-box {
+  border-bottom: 1px solid #D6DDE1;
+  width: 95%;
+}
+.list-url-box {
+  border-bottom: 1px solid #D6DDE1;
+  width: 95%;
+}
+
+#logo {
+  height:50px;
+  width:120px;
+  position: relative;
+  top: 5%;
+}
+
+#input-form {
+  width:85%;
+  height:;
+  position: absolute;
+  top: 40%;
+  margin: 5%;
+  text-align: center;
+}
+
+#website-title-input,
+#website-url-input {
+  margin-bottom: 10%;
+  width:99%;
+  height:40px;
+  border: solid 1px #BBBDBF;
+  padding-top: 10px;
+  position: relative;
+  left: 10px;
+}
+
+ ::placeholder {
+  color: #BBBDBF;
+  font-size: 30px;
+  padding: 5px;
+}
+
+#enter-button {
+  color: #FFFFFF;
+  background-color: #FFC107;
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  border-radius:  0%;
+  border: none;
+  position: relative;
+  left: 10px;
+}
+
+#enter-button:hover {
+  background-color: #FFD773;
+}
+
+.url-box,
+.title-box { 
+  width: 100%;
+  border-bottom: 2px solid lightgray;
+  text-align: center;
+  position: relative;
+
+}
+
+ul {
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+}
+li {
+  background-color: #FFFFFF;
+  border: 1px solid #455A64;
+  list-style: none;
+  width: 90%;
+  height:168px;
+  margin: 3% 5%;
+  padding: 0px;
+  position: relative;
+}
+li section {
+  height: 33%;
+  margin: 10px;
+}
+
+#website-list-title {
+  color: #455A64;
+  font-size: 2em;
+  font-weight: 800;
+  text-align: left;
+  padding-left: 5px;
+}
+
+#website-list-url {
+  color: #607D8B;
+  font-size: 1.5em;
+  text-decoration: underline solid 1px;
+  text-decoration-color: #F2F4F4;
+  position: relative;
+  left: 2%;
+}
+
+#website-list-read-button {
+  text-decoration: underline;
+  border:none;
+  outline: none;
+  text-decoration-color: #F2F4F4;
+  position: relative;
+  font-size: .75em;
+  color:  #455A64;
+  left: 0%;
+  display: inline;
+}
+
+#website-list-delete-button {
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  position: absolute;
+  border: none;
+  outline: none;
+  font-size: .75em;
+  display: inline;
+  color:  #455A64;
+  right: 5px;
+  bottom:5px;
+}
+
+#website-list-url:hover,
+#website-list-read-button:hover,
+#website-list-delete-button:hover {
+  color: #455A64;
+  text-decoration: underline;
+  text-decoration-color: #FFC107;
+  font-weight: 800;
+}
+
+
+/*on click: FOR JS/ change styling after read*/
+
+/*#website-list-stlying-after-read {
+  background-color: #F2F4F4;
+  text-decoration: underline;
+  text-decoration-color: #CFD8DC;
+}
+#website-list-read-button-after-read{
+  color: #F05A28;
+  text-decoration: none;*/
+  
+
