@@ -5,7 +5,7 @@
 
 html,
 body,
-#main {
+.main {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
@@ -13,15 +13,15 @@ body,
 }
 
 #main {
-  display:inline-block;
+ /* display:inline-block*/;
 }
 #section-1 {
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
   background-color: #455A64;
   width: 50%;
   height: 100%;
-  position: fixed;
-  /*display: inline-block;*/
-  vertical-align: top;
 }
 
 .section-1-wrapper {
@@ -31,44 +31,39 @@ body,
   left:50%;
   padding:15px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
 }
 
 #section-2 {
+  position: relative;
+  left: 50%;
+  display: inline-block;
+  overflow: scroll;
   color: #FFFFFF;
   width: 50%;
   height: 100%;
   background-color: #CFD8DC; 
-  position: relative;
-  left: 50%;
-  overflow: scroll;
-  /*display: inline-block;*/
 }
 
 
 h1 {
   color: #FFFFFF;
-  margin: 0 auto;
   width: 100%;
   font-weight: 800;
-  font-size: 70px;
+  font-size: 80px;
   text-align: center;
-  letter-spacing: 0px;
+  margin-bottom: 31px;
+
 }
-.list-title-box {
-  border-bottom: 1px solid #D6DDE1;
-  width: 95%;
-}
-.list-url-box {
-  border-bottom: 1px solid #D6DDE1;
-  width: 95%;
+.list-title-box,
+.list-url-box  {
+  border-bottom: 1px solid #D6DDE1; 
 }
 
 #logo {
-  height:50px;
-  width:120px;
-  position: relative;
-  top: 5%;
+  height: 56px;
+  width: 142px;
+
 }
 
 #input-form {
@@ -78,45 +73,49 @@ h1 {
 
 #website-title-input,
 #website-url-input {
+  position: relative;
   margin-bottom: 10%;
-  width:99%;
+  margin: 20px;
+  padding-top: 10px;
+  width:94%;
   height:40px;
   border: solid 1px #BBBDBF;
-  padding-top: 10px;
-  position: relative;
   font-size: 30px;
 
 }
 
  ::placeholder {
+  padding: 5px;
   color: #BBBDBF;
   font-size: 30px;
-  padding: 5px;
 }
 
 #enter-button {
   color: #FFFFFF;
   background-color: #FFC107;
-  width: 100%;
+  width: 95%;
+  margin: 20px;
   height: 50px;
   font-size: 15px;
   font-weight: 800;
-  border-radius:  0%;
-  border: none;
-  position: relative;
 }
 
 #enter-button:hover {
   background-color: #FFD773;
 }
 
-.url-box,
-.title-box { 
-  width: 100%;
-  border-bottom: 2px solid lightgray;
-  text-align: center;
-  position: relative;
+#enter-button:disabled {
+  background-color: #CFD8DC;
+}
 
+.card-tracker {
+  position: relative;
+  right: 20px;
+  padding: 18px;
+  margin: 40px;
+  width: 88%;
+  border: solid 5px;
+  font-weight: 800;
 }
 
 ul {
@@ -124,15 +123,15 @@ ul {
   height: 100%;
   width: 100%;
 }
+
 li {
+  position: relative;
   background-color: #FFFFFF;
   border: 1px solid #455A64;
   list-style: none;
-  width: 90%;
   height:168px;
   margin: 3% 5%;
-  padding: 0px;
-  position: relative;
+
 }
 li section {
   height: 33%;
@@ -141,44 +140,44 @@ li section {
 
 #website-list-title {
   color: #455A64;
-  font-size: 2em;
+  font-size: 2em;u
   font-weight: 800;
-  text-align: left;
   padding-left: 5px;
+  padding-top: 10px;
 }
 
 #website-list-url {
+  position: relative;
+  left: 5px;
+  top: 15px;
   color: #607D8B;
   font-size: 1.5em;
   text-decoration: underline solid 1px;
   text-decoration-color: #F2F4F4;
-  position: relative;
-  left: 2%;
 }
 
 .website-list-read-button {
-  text-decoration: underline;
-  border:none;
-  outline: none;
-  text-decoration-color: #F2F4F4;
   position: relative;
-  font-size: .75em;
-  color:  #455A64;
   left: 0%;
   display: inline;
+  text-decoration: underline;
+  text-decoration-color: #F2F4F4;
+  border:none;
+  outline: none;
+  font-size: 14px;
+  color:  #455A64;
 }
 
 #website-list-delete-button {
+  position: absolute;
+  right: 10px;
   text-decoration: underline;
   text-decoration-color: #F2F4F4;
-  position: absolute;
   border: none;
   outline: none;
-  font-size: .75em;
-  display: inline;
+  font-size: 14px;
   color:  #455A64;
-  right: 5px;
-  bottom:5px;
+  background: transparent;
 }
 
 #website-list-url:hover,
@@ -190,32 +189,20 @@ li section {
   font-weight: 800;
 }
 
-
 /*on click: FOR JS/ change styling after read*/
-
 .website-list-stlying-after-read {
   background-color: #F2F4F4;
   text-decoration: underline;
   text-decoration-color: #CFD8DC;
 }
 .website-list-red{
+  background-color: #F2F4F4;
   color: #F05A28;
   text-decoration: none;
-  font-weight: 800;
-
-
-
-
-
-@media screen and (max-width: 320px) {
-  
-  .section-1,
-  .section-2 {
-    display: block;
-
-  }
+  font-weight: 800
 }
-  
+
+
 
 
 

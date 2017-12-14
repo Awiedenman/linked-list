@@ -1,11 +1,22 @@
 var parent = $("#section-2");
 
-$('#enter-button').on('click', createCard);
-$('#enter-button').on('click', deleteEntry);
+$('#enter-button').on('click', function() {
+  createCard();
+  numberOfLinks();
+  deleteEntry();
+});
+
 $('#section-1').on('input', '#website-title-input, #website-url-input', enableButton);
-// $('#website-list-read-button').on('click', .website-list-read-button-after-read
-$('#section-2').on('click','.website-list-read-button', readButton);
-$('#section-2').on('click','#website-list-delete-button', removeBookmarkFromList);
+$('#section-2').on('click','.website-list-read-button', function() {
+  readButton();
+  changeBackground();
+});
+
+$('#section-2').on('click','#website-list-delete-button', function() { 
+  $(this).closest('li').remove();
+  numberOfLinks();
+});
+
 
 function createCard(){
   event.preventDefault();
@@ -21,36 +32,41 @@ function createCard(){
       </section>
       <section>
         <button class="website-list-read-button">Read</button>
-        <button id="website-list-delete-button">Delete</button>
+        <button id="website-list-delete-button" class= "background-on-read">Delete</button>
       </section>
     </li>  
 `);
 }
 
+  function numberOfLinks() {
+    $('#number-of-cards').text(+ $('.list-title-box').length);
+  };
+
   function enableButton() {
-  if ($('#website-title-input').val() == '' && $('#website-url-input').val() == '') {
-    $('.enable-on-input').prop('disabled', true);
-  } else if ($('#website-title-input').val() == '' || $('#website-url-input').val() == '') {
-    $('.enable-on-input').prop('disabled', true);
-  } else {
-      $('.enable-on-input').prop('disabled', false);
-  }
-};
+    if ($('#website-title-input').val() == '' && $('#website-url-input').val() == '') {
+      $('.enable-on-input').prop('disabled', true);
+    } else if ($('#website-title-input').val() == '' || $('#website-url-input').val() == '') {
+      $('.enable-on-input').prop('disabled', true);
+    } else {
+        $('.enable-on-input').prop('disabled', false);
+    }
+  };
 
-function deleteEntry() {
-$('#website-title-input').val('');
-$('#website-url-input').val('');
-$('.enable-on-input').prop('disabled', true);
-}
-
-function removeBookmarkFromList() {
-  if(event.target.id === 'website-list-delete-button') {
-    $(this).closest('li').remove();
- };  
-}
+  function deleteEntry() {
+    $('#website-title-input').val('');
+    $('#website-url-input').val('');
+    $('.enable-on-input').prop('disabled', true);
+    }
+   
   function readButton() {
     $(event.target).toggleClass('website-list-red');
- };  
+  }
+    
+  function changeBackground() {
+    $(event.target.parentNode.parentNode).toggleClass('website-list-stlying-after-read');
+  } 
+
+
 
 
  
